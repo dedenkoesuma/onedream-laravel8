@@ -4,6 +4,7 @@ use App\Http\Controllers\About;
 use App\Http\Controllers\Portfolio;
 use App\Http\Controllers\Service;
 use App\Http\Controllers\Contact;
+use App\Http\Controllers\loginController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -20,6 +21,7 @@ Route::get('/about', [About::class, 'index']);
 Route::get('/portfolio', [Portfolio::class, 'index']);
 Route::get('/service', [Service::class. 'index']);
 Route::get('/contact', [Contact::class, 'index']);
-
+Route::get('/login', [LoginController::class, 'index']);
+Route::post('/login', [LoginController::class, 'authenticate']);
 ?>
 
